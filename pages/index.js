@@ -1,5 +1,7 @@
 import Head from 'next/head'
+
 import Search from '../components/Search'
+import Filter from '../components/Filter'
 
 export default function Home() {
   return (
@@ -13,8 +15,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet" /> 
       </Head>
       <main className="mt-12 w-4/5 mx-auto">
-        <div>
+        <div className="flex justify-between">
           <Search />
+          <Filter />
         </div>
       </main>
     </div>
