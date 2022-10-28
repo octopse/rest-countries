@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-green-400">
       <Head>
         <title>Rest Countries</title>
         <meta name="description" content="List of countries of the world" />
