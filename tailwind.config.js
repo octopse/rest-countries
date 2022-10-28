@@ -10,6 +10,14 @@ module.exports = {
         nunito: "nunito, sans-serif",
       }
     },
+    colors: {
+      lmrs: {
+        text: "#111517",
+        back: "#fafafa",
+        element: "#ffffff",
+        input: "#858585",
+      }
+    }
   },
   plugins: [],
 }
