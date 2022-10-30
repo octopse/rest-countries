@@ -1,4 +1,4 @@
-import { IoIosSunny } from 'react-icons/Io'
+import { IoIosSunny } from 'react-icons/io'
 
 function Nav (){
   return(
