@@ -24,7 +24,7 @@ export default function index({country}){
         </section>
         <section className="mt-14 flex justify-between text-sm">
           <div className="w-[45%] min-h-[96]">
-            <img src={country.flags.png} alt={country.name.common + " flag"} className="w-full object-cover" />
+            <img src={country.flags.svg} alt={country.name.common + " flag"} className="w-full object-cover" />
           </div>
           <div className="w-[45%]">
             <h2 className="mt-8 text-semibold text-2xl font-extrabold">{country.name.common}</h2>
