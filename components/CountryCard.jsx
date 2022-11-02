@@ -6,7 +6,7 @@ function CountryCard({country}){
       xsm:w-2/5 xsm:min-w-[47%]
       sm:w-[30%] sm:min-w-[30%]
       lg:w-1/5 lg:min-w-[23%]">
-      <Link href={`country/${country.cca2}`}>
+      <Link href={`country/${country.cca3}`}>
         <img src={country.flags.png} alt={country.name.common + " flag"} className="w-full object-cover cursor-pointer" />
       </Link>
       <div className="text-sm p-5 space-y-1 font-semibold">
