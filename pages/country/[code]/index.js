@@ -46,7 +46,7 @@ export default function index({country}){
               <div className="flex items-center space-x-2 flex-wrap">
                 <span className="font-semibold">Border Countries: </span>
                 {country.borders && country.borders.map((border, index) => ( (index <= 2) ? 
-                  <span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded">{border}</span> : ''
+                  <Link href={`./${border}`}><span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded cursor-pointer">{border}</span></Link> : ''
                 ))}
               </div>
             </div>
