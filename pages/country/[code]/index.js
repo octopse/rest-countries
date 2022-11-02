@@ -22,32 +22,36 @@ export default function index({country}){
             </div>
           </Link>
         </section>
-        <section className="mt-14 flex justify-between">
-          <div className="w-[45%] min-h-[96]">
+        <section className="mt-14 flex flex-col
+            md:flex-row md:justify-between">
+          <div className="w-full md:w-[45%] min-h-[96]">
             <img src={country.flags.svg} alt={country.name.common + " flag"} className="w-full object-cover" />
           </div>
-          <div className="w-[45%]">
-            <h2 className="mt-8 text-semibold text-2xl font-extrabold">{country.name.common}</h2>
-            <div className="mt-6 flex justify-between">
-              <div className="font-semibold space-y-2">
+          <div className="w-full md:w-[45%]">
+            <h2 className="mt-8 text-semibold text-2xl font-extrabold
+              md:mt-0 lg:mt-8">{country.name.common}</h2>
+            <div className="mt-6 flex flex-col sm:flex-row sm:justify-between md:flex-col lg:flex-row">
+              <div className="font-semibold space-y-2 lg:mr-4">
                 <p>Native Name: <span className="font-light">{country.name.common}</span></p>
                 <p>Population: <span className="font-light">{numberWithCommas(country.population)}</span></p>
                 <p>Region: <span className="font-light">{country.region}</span></p>
                 <p>Sub Region: <span className="font-light">{country.subregion}</span></p>
                 <p>Capital: <span className="font-light">{country.capital}</span></p>
               </div>
-              <div className="font-semibold space-y-2">
+              <div className="font-semibold space-y-2 mt-8 sm:mt-0 md:mt-2 lg:mt-0">
                 <p>Top Level Domain: <span className="font-light">{country.tld}</span></p>
                 <p>Currencies: <span className="font-light">{(Object.values(country.currencies))[0].name}</span></p>
                 <p>Languages: <span className="font-light">{(commasOfLanguages(country.languages))}</span></p>
               </div>
             </div>
-            <div className="mt-14">
-              <div className="flex items-center space-x-2 flex-wrap">
+            <div className="mt-14 md:mt-8 xl:mt-14">
+              <div className="flex flex-col space-x-2 sm:flex-row sm:items-center md:flex-col md:items-start xl:items-center xl:flex-row">
                 <span className="font-semibold">Border Countries: </span>
-                {country.borders && country.borders.map((border, index) => ( (index <= 2) ? 
-                  <Link href={`./${border}`}><span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded cursor-pointer">{border}</span></Link> : ''
-                ))}
+                <div className="flex space-x-4">
+                  {country.borders && country.borders.map((border, index) => ( (index <= 2) ? 
+                    <Link href={`./${border}`}><span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded cursor-pointer">{border}</span></Link> : ''
+                  ))}
+                </div>
               </div>
             </div>
           </div>
