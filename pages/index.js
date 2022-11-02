@@ -15,7 +15,7 @@ export default function Home({countries}) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet" /> 
       </Head>
-      <main className="mt-8 w-4/5 mx-auto max-w-[1440px]">
+      <main className="mt-8 pb-8 w-4/5 mx-auto max-w-[1440px]">
         <section className="flex flex-col
           lg:flex-row lg:justify-between">
           <Search />
