@@ -1,10 +1,18 @@
 import Head from 'next/head'
+import { useState } from 'react'
 
 import Search from '../components/Search'
 import Filter from '../components/Filter'
 import Countries from '../components/Countries'
 
 export default function Home({countries}) {
+
+  const [dropdown, showDropdown] = useState(false);
+
+  const handleDropdown = () => {
+    showDropdown(!dropdown)
+  }
+
   return (
     <div className="bg-lmrs-back font-nunito">
       <Head>
@@ -19,7 +27,7 @@ export default function Home({countries}) {
         <section className="flex flex-col
           lg:flex-row lg:justify-between">
           <Search />
-          <Filter />
+          <Filter handleDropdown={handleDropdown} dropdown={dropdown}/>
         </section>
         <section>
           <Countries countries={countries} />
