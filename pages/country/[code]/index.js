@@ -15,14 +15,16 @@ export default function index({country}){
       </Head>
       <main className="mt-14 w-4/5 mx-auto max-w-[1440px]">
         <section className="text-sm">
-          <div className="flex items-center px-6 py-1 w-20 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer">
-            <BsArrowLeft className="text-lg text-lmrs-text"/>
-            <span className="ml-2">Back</span>
-          </div>
+          <Link href="/">
+            <div className="flex items-center justify-center px-6 py-1 w-28 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer">
+              <BsArrowLeft className="text-lg text-lmrs-text"/>
+              <span className="ml-2">Back</span>
+            </div>
+          </Link>
         </section>
         <section className="mt-14 flex justify-between text-sm">
-          <div className="w-[45%] min-h-[96] bg-green-400">
-            <img src={country.flags.svg} alt={country.name.common + " flag"} className="w-full object-cover" />
+          <div className="w-[45%] min-h-[96]">
+            <img src={country.flags.png} alt={country.name.common + " flag"} className="w-full object-cover" />
           </div>
           <div className="w-[45%]">
             <h2 className="mt-8 text-semibold text-2xl font-extrabold">{country.name.common}</h2>
@@ -41,9 +43,9 @@ export default function index({country}){
               </div>
             </div>
             <div className="mt-14">
-              <div className="flex items-center space-x-2 space-y-2 flex-wrap">
+              <div className="flex items-center space-x-2 flex-wrap">
                 <span className="font-semibold">Border Countries: </span>
-                {country.borders.map((border, index) => ( (index <= 2) ? 
+                {country.borders && country.borders.map((border, index) => ( (index <= 2) ? 
                   <span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded">{border}</span> : ''
                 ))}
               </div>
