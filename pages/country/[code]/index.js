@@ -14,7 +14,7 @@ export default function index({country}){
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet" /> 
       </Head>
       <main className="mt-14 pb-8 w-4/5 mx-auto max-w-[1440px]">
-        <section className="text-sm">
+        <section>
           <Link href="/">
             <div className="flex items-center justify-center px-6 py-1 w-28 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer">
               <BsArrowLeft className="text-lg text-lmrs-text"/>
@@ -22,7 +22,7 @@ export default function index({country}){
             </div>
           </Link>
         </section>
-        <section className="mt-14 flex justify-between text-sm">
+        <section className="mt-14 flex justify-between">
           <div className="w-[45%] min-h-[96]">
             <img src={country.flags.svg} alt={country.name.common + " flag"} className="w-full object-cover" />
           </div>
