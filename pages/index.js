@@ -5,13 +5,30 @@ import Search from '../components/Search'
 import Filter from '../components/Filter'
 import Countries from '../components/Countries'
 
+
 export default function Home({countries}) {
 
+  const allCountries = countries
+  const [keyword, setKeyword] = useState("");
+  const [continentSelected, setContinentSelected] = useState("");
   const [dropdown, showDropdown] = useState(false);
+
+  function searchAction(keyword1, tosearch){
+    return tosearch.filter((element) => 
+      element.region.includes(continentSelected) && element.name.common.toLowerCase().includes(keyword1)
+    )
+  }
+  const CountriesFiltered = searchAction(keyword, allCountries)
 
   const handleDropdown = () => {
     showDropdown(!dropdown)
   }
+
+  const handleSearch = (event) => {
+    setKeyword(event.target.value)
+  }
+
+
 
   return (
     <div className="bg-lmrs-back font-nunito">
@@ -26,11 +43,11 @@ export default function Home({countries}) {
       <main className="mt-8 pb-8 w-4/5 mx-auto max-w-[1440px]">
         <section className="flex flex-col
           lg:flex-row lg:justify-between">
-          <Search />
-          <Filter handleDropdown={handleDropdown} dropdown={dropdown}/>
+          <Search handleSearch={handleSearch} />
+          <Filter handleDropdown={handleDropdown} dropdown={dropdown} setContinentSelected={setContinentSelected}/>
         </section>
         <section>
-          <Countries countries={countries} />
+          <Countries countries={CountriesFiltered} />
         </section>
 
       </main>
