@@ -7,7 +7,7 @@ function Layout ({children}){
   return(
     <ThemeProvider attribute="class">
       <div className="font-nunito bg-lmrs-back min-h-screen dark:bg-dmrs-back">
-        <NextNProgress color="#111517"/>
+        <NextNProgress color="#858585"/>
         <Nav />
         {children}
       </div>
