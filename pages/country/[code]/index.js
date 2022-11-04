@@ -16,8 +16,9 @@ export default function index({country}){
       <main className="mt-14 pb-8 w-4/5 mx-auto max-w-[1440px]">
         <section>
           <Link href="/">
-            <div className="flex items-center justify-center px-6 py-1 w-28 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer">
-              <BsArrowLeft className="text-lg text-lmrs-text"/>
+            <div className="flex items-center justify-center px-6 py-1 w-28 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer 
+              dark:bg-dmrs-element dark:text-dmrs-text">
+              <BsArrowLeft className="text-lg text-lmrs-text dark:text-dmrs-text"/>
               <span className="ml-2">Back</span>
             </div>
           </Link>
@@ -49,7 +50,8 @@ export default function index({country}){
                 <span className="font-semibold">Border Countries: </span>
                 <div className="flex space-x-4">
                   {country.borders && country.borders.map((border, index) => ( (index <= 2) ? 
-                    <Link href={`./${border}`}><span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded cursor-pointer">{border}</span></Link> : ''
+                    <Link href={`./${border}`}><span key={index} className="flex items-center justify-between px-6 py-1 shadow bg-lmrs-back text-lmrs-text rounded cursor-pointer 
+                      dark:bg-dmrs-element dark:text-dmrs-text">{border}</span></Link> : ''
                   ))}
                 </div>
               </div>

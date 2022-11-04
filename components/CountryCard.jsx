@@ -2,7 +2,8 @@ import Link from 'next/link'
 
 function CountryCard({country}){
   return(
-    <div className="mt-8 bg-lmrs-element text-lmrs-text shadow rounded-md overflow-hidden
+    <div className="mt-8 bg-lmrs-element text-lmrs-text shadow rounded-md overflow-hidden 
+      dark:bg-dmrs-element dark:text-dmrs-text
       xsm:w-2/5 xsm:min-w-[47%]
       sm:w-[30%] sm:min-w-[30%]
       lg:w-1/5 lg:min-w-[23%]">

@@ -31,7 +31,7 @@ export default function Home({countries}) {
 
 
   return (
-    <div className="bg-lmrs-back font-nunito">
+    <>
       <Head>
         <title>Rest Countries</title>
         <meta name="description" content="List of countries of the world" />
@@ -51,7 +51,7 @@ export default function Home({countries}) {
         </section>
 
       </main>
-    </div>
+    </>
   )
 }
 

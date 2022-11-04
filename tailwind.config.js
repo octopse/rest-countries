@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -15,6 +16,11 @@ module.exports = {
           back: "#fafafa",
           element: "#ffffff",
           input: "#858585",
+        },
+        dmrs:{
+          text: "#ffffff",
+          back: "#202c37",
+          element: "#2b3945",
         }
       },
     },
