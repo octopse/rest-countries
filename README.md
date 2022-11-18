@@ -1,7 +1,13 @@
+# World Countries
 
-## Getting Started
 
-First, run the development server:
+Install all dependencies
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -11,11 +17,9 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## More
+- Follow this
+[link](https://rest-countries-octopse.vercel.app/) to preview
+- Used [REST COUNTRIES API](https://restcountries.com/) to get all the countries and their information
+- Design from [frontendmentor.io](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
