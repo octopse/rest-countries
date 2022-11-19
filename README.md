@@ -1,6 +1,6 @@
 # World Countries
 
-![](design.jpg)
+![](design2.jpg)
 
 Install all dependencies
 
