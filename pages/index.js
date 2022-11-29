@@ -15,7 +15,7 @@ export default function Home({countries}) {
 
   function searchAction(keyword1, tosearch){
     return tosearch.filter((element) => 
-      element.region.includes(continentSelected) && element.name.common.toLowerCase().includes(keyword1)
+      element.region.includes(continentSelected) && element.name.common.toLowerCase().includes(keyword1.toLowerCase())
     )
   }
   const CountriesFiltered = searchAction(keyword, allCountries)
