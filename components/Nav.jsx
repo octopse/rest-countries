@@ -6,7 +6,7 @@ function Nav (){
   const {theme, setTheme} = useTheme()
   return(
     <header className="bg-lmrs-element w-full flex justify-center shadow dark:bg-dmrs-element">
-      <nav className="w-4/5 max-w-[1440px] flex justify-between items-center py-4">
+      <nav className="w-4/5 max-w-[1600px] flex justify-between items-center py-4">
         <h1 className="text-xl font-semibold mr-6">Where in the world?</h1>
         <div className="flex items-center cursor-pointer ">
           {theme === 'light' ? 

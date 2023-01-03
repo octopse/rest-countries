@@ -13,7 +13,7 @@ export default function index({country}){
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet" /> 
       </Head>
-      <main className="mt-14 pb-8 w-4/5 mx-auto max-w-[1440px]">
+      <main className="mt-14 pb-8 w-4/5 mx-auto max-w-[1600px]">
         <section>
           <Link href="/">
             <div className="flex items-center justify-center px-6 py-1 w-28 shadow bg-lmrs-element text-lmrs-text rounded cursor-pointer 
